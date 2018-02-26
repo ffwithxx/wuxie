@@ -95,6 +95,7 @@
     
 
 }
+/*获取数据*/
 - (void)getData {
     [self show];
     [[AFClient shareInstance] GetStoreCashDatawithstoreId:storeidStr withstartDate:self.beginTimeText.text withendDate:self.endTimeText.text withArr:postArr progressBlock:^(NSProgress *progress) {
@@ -136,7 +137,7 @@
                        [self.navigationController pushViewController:monthVc animated:YES];
                    }
                    
-//               }
+
         
            }else {
                NSString *str = [responseBody valueForKey:@"errors"];
